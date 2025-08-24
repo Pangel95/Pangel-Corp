@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="description" content="Mercado libre educativo,">
+        <title>Mercado Libre Educativo</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/all.min.css" integrity="sha512-iecdLmaskl7CVKXNQ/ZH/XLlvWZ0JyJ7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc8eNBvH0H/ZpiBW==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="https://via.placeholder.com/150x150?text=logo+ML" alt="Logo Mercado Libre">
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar Producto, Marcas y Más..." aria-label="Busqueda">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <button id="login-btn" class="login">Ingresar</button>
+                    <a href="#" class="cart"><i class="fas fa-shopping-cart"></i> Carrito</a>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <div class="container">
+                <ul class="categories">
+                    <li><a href="#">categorias <i class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li> <a href="#">Electronica</a></li>
+                            <li> <a href="#">Hogar</li>
+                            <li> <a href="#">moda></li>
+                        </ul>
+                    <li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Historial</a></li>
+                    <li><a href="#">Supermercado</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <section class="features-products">
+                <div class="container">
+                    <h2>Ofertas del Dia</h2>
+                    <div class="product-grid" id="product-grid">
+                        <!--Productos se cargarán aquí dinamicamente con JS, pero agregamos algunos estaticos como fallback-->
+                        <article class="product">
+                            <img src="https://www.apple.com/es/iphone-16/images/overview/apple-intelligence/apple_intelligence_endframe__ewm1810mnb0i_xlarge.jpg" alt="Producto 1">
+                            <h3>smarphone XYZ</h3>
+                            <p class="price">$999</p>
+                            <button>Añadir al Carrito</button>
+                        </article>
+                        <article class="product">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWstW62qnjy5SuoiMOWmhgVrZ_x22AAksOCg&s" alt="Producto 2">
+                            <h3>Sofa Moderno</h3>
+                            <p class="price">$499</p>
+                            <button>Añadir al Carrito</button>
+                        </article> 
+                        <article class="product">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9ONjq0Op8IsyKXaRG_azl4LK2h9ftIgV_yQ&s" alt="Producto 3">
+                            <h3>Zapatillas Deportivas</h3>
+                            <p class="price">$79</p>
+                            <button>Añadir al Carrito</button>
+                        </article>
+                        <!--Agregamos mas productos estaticos para ejemplo-->
+                        <article class="product">
+                            <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/14/16/1416a454e5984d72fab1aaa649f45939.jpg" alt="Producto 4">
+                            <h3> Libro Best seller</h3>
+                            <p class="price">$19</p>
+                            <button>Añadir al Carrito</button>
+                        </article>
+                        <article class="product">
+                            <img src="https://www.atenasventilacion.com.ar/wp-content/uploads/pe-bm120r-w-02.jpg" alt="Producto 5">
+                            <h3>Batidora Electronica</h3>
+                            <p class="price">$59</p>
+                            <button>Añadir al Carrito</button>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--Modal para login (usando <dialog> para optimizacion nativa)-->
+            <dialog id="login-modal">
+                <form method="dialog">
+                    <h2>Iniciar sesion</h2>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="tuemail@ejemplo.com" required>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" placeholder="*********" required>
+                    <button type="submit">Ingresar</button>
+                    <button type="button" id="close-modal">Cancelar</button>
+                </form>
+            </dialog>
+        
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Mecado Libre Educativo. Todos los derechos reservados.</p>
+                <ul> 
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Aviso Legal</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Privacidad</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>"
+
+    </body>
+</html>
