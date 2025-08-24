@@ -1,0 +1,120 @@
+/*... (Mantener el codigo anterior. y agregar esto al final) ...*/
+body {
+    background-color: rgb(255, 255, 18);
+}
+
+p.price {
+    font-size: 2.5em;
+    color: #fffdfd;
+    font-weight: bold;
+}
+
+article.product img {
+    width: 100%;
+    height: 50%;
+    border-radius: 15px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product {
+    background-color: #ecf004;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 200%;
+    object-fit: cover;
+}
+
+.product-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-content h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.product-content p {
+    margin: 10px 0;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+/*Media queries para responsividad */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+div.product-grid {
+    text-align: center;
+}
+
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+dialog label {
+    font-weight: bold;
+}
+
+dialog input {
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+}
+
+dialog button {
+    background: var(--secondary-color);
+    color: #FFF;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+dialog button[type="button"] {
+    background: #EEE;
+    color: var(--text-color);
+}
+
+/* Responsive para modal */
+@media (max-width: 768px) {
+    dialog {
+        padding: 15px;
+    }
+}
